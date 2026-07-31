@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arjun-NA | Secure Communications Terminal</title>
-    <script src="https://tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <link href="https://googleapis.com" rel="stylesheet">
+    <!-- Corrected CDNs -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: { extend: { fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } } }
@@ -14,7 +17,6 @@
     </script>
     <style>
         .tech-heading::before { content: ">> "; color: #22d3ee; }
-        /* Honeypot field configuration - keeps field invisible to humans, visible to dumb bots */
         .hidden-field { display: none !important; visibility: hidden !important; }
     </style>
 </head>
@@ -23,7 +25,7 @@
     <div class="max-w-6xl mx-auto px-4 py-8 lg:py-16">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
-            <!-- LEFT PROFILE SIDEBAR (Preserved Layout) -->
+            <!-- LEFT PROFILE SIDEBAR -->
             <header class="lg:col-span-4 lg:sticky lg:top-16 bg-slate-900/30 backdrop-blur-md border border-slate-800/60 rounded-xl p-6 lg:p-8 shadow-2xl">
                 <div class="font-mono text-[10px] text-slate-500 mb-4 tracking-widest uppercase flex items-center gap-2">
                     <i class="fa-solid fa-shield-halved text-cyan-400"></i> [ SECURE_COMMS_NODE ]
@@ -31,7 +33,7 @@
                 <h1 class="text-3xl font-bold text-white tracking-tight font-mono mb-1">Arjun-NA</h1>
                 <p class="text-sm font-medium text-cyan-400 font-mono mb-6">// Communications Registry</p>
                 <div class="flex flex-col gap-3">
-                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="w-full text-center font-mono text-sm font-medium bg-slate-900/60 text-white border border-slate-700/80 px-5 py-3 rounded-md hover:border-cyan-400 hover:text-cyan-400 transition-all duration-200">
+                    <a href="https://www.linkedin.com/in/arjunnapmna/" target="_blank" rel="noopener" class="w-full text-center font-mono text-sm font-medium bg-slate-900/60 text-white border border-slate-700/80 px-5 py-3 rounded-md hover:border-cyan-400 hover:text-cyan-400 transition-all duration-200">
                         <i class="fa-brands fa-linkedin-in mr-2"></i> Verified LinkedIn
                     </a>
                 </div>
@@ -53,10 +55,10 @@
                         Inbound Payload Encryption Form
                     </h2>
 
-                    <!-- Hardened Form Element -->
-                    <form action="https://formspree.io" method="POST" class="space-y-6 bg-slate-900/20 border border-slate-900 rounded-xl p-6 lg:p-8">
+                    <!-- Formspree Action Target -->
+                    <form action="https://formspree.io/f/YOUR_ACTUAL_FORMSPREE_ID_HERE" method="POST" class="space-y-6 bg-slate-900/20 border border-slate-900 rounded-xl p-6 lg:p-8">
                         
-                        <!-- 🚨 HONEYPOT SPAM PROTECTION FIELD (Do NOT remove) -->
+                        <!-- HONEYPOT FIELD -->
                         <div class="hidden-field">
                             <label for="machine_validation">System Metadata (Leave Blank)</label>
                             <input type="text" id="machine_validation" name="machine_validation" autocomplete="off" tabindex="-1">

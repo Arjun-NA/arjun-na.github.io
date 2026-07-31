@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arjun-NA | Embedded Systems Terminal</title>
-    <!-- Tailwind CSS -->
-    <script src="https://tailwindcss.com"></script>
-    <!-- Font Awesome Icons CDN -->
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Corrected CDNs -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -28,7 +26,6 @@
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .tech-heading::before { content: ">> "; color: #22d3ee; }
-        /* Blinking Terminal Cursor */
         .cursor {
             display: inline-block;
             width: 8px;
@@ -45,45 +42,40 @@
 </head>
 <body class="bg-slate-950 text-slate-400 min-h-screen selection:bg-cyan-500/30 selection:text-cyan-200">
 
-    <!-- Subtle Engineering Dot Matrix Grid Layer -->
     <div class="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
 
     <div class="relative max-w-6xl mx-auto px-4 py-8 lg:py-16">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
-            <!-- ================= LEFT COLUMN: STICKY PROFILE CARD ================= -->
+            <!-- STICKY PROFILE CARD -->
             <header class="lg:col-span-4 lg:sticky lg:top-16 bg-slate-900/30 backdrop-blur-md border border-slate-800/60 rounded-xl p-6 lg:p-8 shadow-2xl">
                 <div class="font-mono text-[10px] text-slate-500 mb-4 tracking-widest uppercase flex items-center gap-2">
                     <i class="fa-solid fa-microchip text-cyan-400"></i> [ NODE: SYS_ACTIVE ]
                 </div>
                 
-                <h1 class="text-3xl font-bold text-white tracking-tight font-mono mb-1">
-                    Arjun-NA
-                </h1>
-                
-                <!-- Dynamic Target Container for Typing Script -->
+                <h1 class="text-3xl font-bold text-white tracking-tight font-mono mb-1">Arjun-NA</h1>
                 <div class="text-sm font-medium text-cyan-400 font-mono mb-6 h-6 flex items-center">
                     <span id="typewriter"></span><span class="cursor"></span>
                 </div>
                 
                 <p class="text-sm leading-relaxed text-slate-400 mb-8">
-                    Senior Embedded Systems Engineer specializing in low-level firmware architecture, hardware-software co-design, and real-time multiprocessing platforms.
+                    Over 7 years of engineering expertise deploying thread-safe, multi-processor firmware architectures. Specializing in high-speed optical hardware enablement, distributed network systems, and algorithmic embedded machine learning systems.
                 </p>
                 
                 <div class="flex flex-col gap-3">
                     <a href="contact.html" class="w-full text-center font-mono text-sm font-medium bg-cyan-400 text-slate-950 px-5 py-3 rounded-md hover:bg-white hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-200">
                         <i class="fa-solid fa-terminal mr-2"></i> Inquire / Hire
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="w-full text-center font-mono text-sm font-medium bg-slate-900/60 text-white border border-slate-700/80 px-5 py-3 rounded-md hover:border-cyan-400 hover:text-cyan-400 transition-all duration-200">
+                    <a href="https://www.linkedin.com/in/arjunnapmna/" target="_blank" rel="noopener" class="w-full text-center font-mono text-sm font-medium bg-slate-900/60 text-white border border-slate-700/80 px-5 py-3 rounded-md hover:border-cyan-400 hover:text-cyan-400 transition-all duration-200">
                         <i class="fa-brands fa-linkedin-in mr-2"></i> LinkedIn Profile
                     </a>
                 </div>
             </header>
 
-            <!-- ================= RIGHT COLUMN: SUBSECTION REGISTRY ================= -->
+            <!-- RIGHT COLUMN CONTENT -->
             <main class="lg:col-span-8 space-y-12 lg:space-y-16">
                 
-                <!-- TERMINAL NAVIGATION COMPONENT -->
+                <!-- TERMINAL NAVIGATION -->
                 <nav class="flex gap-4 border-b border-slate-800 pb-4 font-mono text-xs tracking-wider">
                     <a href="index.html" class="text-cyan-400 border-b border-cyan-400 pb-4 -mb-[17px] font-bold"><i class="fa-solid fa-folder-open mr-1"></i> // CORE</a>
                     <a href="projects.html" class="text-slate-500 hover:text-slate-300 transition-colors"><i class="fa-solid fa-diagram-project mr-1"></i> // REPOS</a>
@@ -97,77 +89,67 @@
                     </h2>
                     
                     <div class="space-y-6">
-                        <!-- MaxLinear Block -->
-                        <div class="bg-slate-900/20 border border-slate-900 rounded-xl p-6 border-l-2 border-l-cyan-500/40 hover:border-slate-800 transition-all duration-300">
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <!-- MaxLinear -->
+                        <div class="bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 hover:border-slate-700/80 transition-all duration-200">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
                                 <div>
-                                    <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                                        Senior Software Engineer <span class="text-xs font-mono font-normal text-slate-500">[HSI_DSP]</span>
-                                    </h3>
-                                    <p class="font-mono text-xs text-cyan-400"><i class="fa-solid fa-building text-[10px] mr-1"></i> MaxLinear, Inc. &bull; Carlsbad, CA</p>
+                                    <h3 class="text-lg font-bold text-white">Senior Software Engineer (Embedded Systems)</h3>
+                                    <p class="font-mono text-sm text-cyan-400">MaxLinear, Inc. &bull; Carlsbad, CA</p>
                                 </div>
-                                <span class="font-mono text-xs bg-slate-900/60 text-slate-400 border border-slate-800 px-3 py-1 rounded-full self-start sm:self-center">
+                                <span class="font-mono text-xs bg-slate-900 text-slate-400 border border-slate-800 px-3 py-1 rounded-full self-start md:self-center">
                                     07/2021 – Present
                                 </span>
                             </div>
-                            <ul class="space-y-3 text-sm text-slate-400 list-none">
-                                <li class="flex items-start gap-2.5">
-                                    <i class="fa-solid fa-circle-nodes text-cyan-500/60 text-[10px] mt-1.5 shrink-0"></i>
-                                    <span>Develop firmware for High-Speed Interconnect pipelines, leveraging advanced PAM4 DSP engines to enable high-efficiency 800G optical data routing systems.</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <i class="fa-solid fa-network-wired text-cyan-500/60 text-[10px] mt-1.5 shrink-0"></i>
-                                    <span>Engineer software infrastructure for Remote PHY SoCs, managing telemetry routing across historical broadband layers while anchoring next-gen DOCSIS 4.0 specifications.</span>
-                                </li>
+                            <ul class="space-y-2.5 text-sm text-slate-400 list-none pl-0">
+                                <li class="flex items-start gap-2.5"><span class="text-cyan-400 font-mono mt-0.5">&bull;</span> Develop firmware for the High-Speed Interconnect (HSI) portfolio, utilizing advanced PAM4 DSP architectures to drive ultra-high-bandwidth 800G optical datalink pipelines across enterprise data centers.</li>
+                                <li class="flex items-start gap-2.5"><span class="text-cyan-400 font-mono mt-0.5">&bull;</span> Engineer embedded software modules for Remote PHY SoC devices supporting multi-generation video pipelines, DOCSIS 3.0, and DOCSIS 3.1 ecosystems; drive early architectural features for future Distributed Access Architecture (DAA) updates under DOCSIS 4.0 paradigms.</li>
+                                <li class="flex items-start gap-2.5"><span class="text-cyan-400 font-mono mt-0.5">&bull;</span> Author robust, reentrant, and thread-safe control code patterns in low-overhead C and Python platforms tailored to complex asynchronous multi-processor infrastructure target units.</li>
                             </ul>
+                        </div>
+
+                        <!-- TIA -->
+                        <div class="bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 hover:border-slate-700/80 transition-all duration-200">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Software Trainee</h3>
+                                    <p class="font-mono text-sm text-cyan-400">TIA Pvt Ltd &bull; Bangalore, India</p>
+                                </div>
+                                <span class="font-mono text-xs bg-slate-900 text-slate-400 border border-slate-800 px-3 py-1 rounded-full self-start md:self-center">
+                                    08/2017 – 08/2018
+                                </span>
+                            </div>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Independently engineered and deployed an automated Python tracking tool designed to harvest critical physical runtime asset metrics from industrial PLCs over RS485 communication links into a MySQL database via ODBC. Designed clean diagnostic web control panels for field engineering crews using HTML, CSS, and a PHP backend.
+                            </p>
                         </div>
                     </div>
                 </section>
-
             </main>
         </div>
     </div>
 
-    <!-- NATIVE TERMINAL TYPING CONTROLLER -->
+    <!-- TERMINAL TYPING SCRIPT -->
     <script>
-        const words = [
-            "Senior Firmware Engineer",
-            "Embedded Systems Architect",
-            "C / Python Developer"
-        ];
+        const words = ["Senior Firmware Engineer", "Embedded Systems Architect", "C / Python Specialist"];
         let i = 0, timer;
-
         function typingEffect() {
             let word = words[i].split("");
             var loopTyping = function() {
-                if (word.length > 0) {
-                    document.getElementById('typewriter').innerHTML += word.shift();
-                } else {
-                    setTimeout(deletingEffect, 2000);
-                    return false;
-                }
+                if (word.length > 0) { document.getElementById('typewriter').innerHTML += word.shift(); }
+                else { setTimeout(deletingEffect, 2000); return false; }
                 timer = setTimeout(loopTyping, 70);
             };
             loopTyping();
         }
-
         function deletingEffect() {
             let word = words[i].split("");
             var loopDeleting = function() {
-                if (word.length > 0) {
-                    word.pop();
-                    document.getElementById('typewriter').innerHTML = word.join("");
-                } else {
-                    if (words.length > (i + 1)) { i++; } else { i = 0; }
-                    setTimeout(typingEffect, 500);
-                    return false;
-                }
+                if (word.length > 0) { word.pop(); document.getElementById('typewriter').innerHTML = word.join(""); }
+                else { if (words.length > (i + 1)) { i++; } else { i = 0; } setTimeout(typingEffect, 500); return false; }
                 timer = setTimeout(loopDeleting, 40);
             };
             loopDeleting();
         }
-        
-        // Initialize Core Script Sequence
         document.addEventListener('DOMContentLoaded', typingEffect);
     </script>
 </body>
