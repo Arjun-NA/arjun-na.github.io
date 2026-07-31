@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arjun-NA | Research &amp; Repositories</title>
+    <title>Arjun-NA | Engineering &amp; Research Repositories</title>
+    <!-- Repaired CDNs -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +26,7 @@
     <div class="relative max-w-6xl mx-auto px-4 py-8 lg:py-16">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
-            <!-- STICKY PROFILE CARD -->
+            <!-- LEFT PROFILE SIDEBAR -->
             <header class="lg:col-span-4 lg:sticky lg:top-16 bg-slate-900/30 backdrop-blur-md border border-slate-800/60 rounded-xl p-6 lg:p-8 shadow-2xl">
                 <div class="font-mono text-[10px] text-slate-500 mb-4 tracking-widest uppercase flex items-center gap-2">
                     <i class="fa-solid fa-folder-tree text-cyan-400"></i> [ REPO_REGISTRY_NODE ]
@@ -33,13 +34,13 @@
                 <h1 class="text-3xl font-bold text-white tracking-tight font-mono mb-1">Arjun-NA</h1>
                 <p class="text-sm font-medium text-cyan-400 font-mono mb-6">// Firmware &amp; Research Index</p>
                 <div class="flex flex-col gap-3">
-                    <a href="https://www.linkedin.com/in/arjunnapmna/" target="_blank" rel="noopener" class="w-full text-center font-mono text-sm font-medium bg-slate-900/60 text-white border border-slate-700/80 px-5 py-3 rounded-md hover:border-cyan-400 hover:text-cyan-400 transition-all duration-200">
-                        <i class="fa-brands fa-linkedin-in mr-2"></i> LinkedIn Profile
+                    <a href="contact.html" class="w-full text-center font-mono text-sm font-medium bg-cyan-400 text-slate-950 px-5 py-3 rounded-md hover:bg-white hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-200">
+                        <i class="fa-solid fa-terminal mr-2"></i> Request Architecture Quote
                     </a>
                 </div>
             </header>
 
-            <!-- RIGHT COLUMN CONTENT -->
+            <!-- RIGHT CONTENT COLUMN -->
             <main class="lg:col-span-8 space-y-12">
                 
                 <!-- GLOBAL NAVIGATION BAR -->
@@ -49,25 +50,92 @@
                     <a href="contact.html" class="text-slate-500 hover:text-slate-300 transition-colors"><i class="fa-solid fa-envelope mr-1"></i> // COMM</a>
                 </nav>
 
-                <!-- PUBLICATIONS SECTION -->
+                <!-- SECTION 1: ACADEMIC & ACADEMIC CONTRACT PROJECTS -->
+                <section>
+                    <h2 class="tech-heading text-sm font-mono font-bold text-white uppercase tracking-widest mb-6">
+                        Academic &amp; Applied Engineering Projects
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        
+                        <!-- Project 1 -->
+                        <div class="bg-slate-900/30 border border-slate-800/60 rounded-xl p-5 flex flex-col justify-between hover:border-cyan-400/50 transition-colors duration-200">
+                            <div>
+                                <h3 class="text-base font-bold text-white mb-2">Adaptive Cruise Control System</h3>
+                                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                    Designed and developed an Adaptive Cruise Control system using NXP S32K144 EVB boards and the MOTOGD-DEVKIT shield. Integrated logic targets seamlessly utilizing MATLAB Simulink Model-Based Design Toolbox and the S32 Design Studio IDE.
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-800/40 font-mono text-[11px] text-slate-500">
+                                <span>MATLAB / S32 IDE</span>
+                                <a href="https://github.com/Arjun-NA" target="_blank" class="text-cyan-400 hover:underline">Repository &rarr;</a>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="bg-slate-900/30 border border-slate-800/60 rounded-xl p-5 flex flex-col justify-between hover:border-cyan-400/50 transition-colors duration-200">
+                            <div>
+                                <h3 class="text-base font-bold text-white mb-2">Advanced Emergency Vehicle Detection</h3>
+                                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                    Improved emergency vehicle detection at traffic intersections using automatic gain control, low-noise microphones, bandpass filtering, and sound localization techniques to automate traffic light control. Configured physical filters via MATLAB Filter Designer, NXP FRDM-K64F, and MCUXpresso IDE.
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-800/40 font-mono text-[11px] text-slate-500">
+                                <span>NXP K64F / Audio Signals</span>
+                                <a href="https://github.com/Arjun-NA" target="_blank" class="text-cyan-400 hover:underline">Repository &rarr;</a>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="bg-slate-900/30 border border-slate-800/60 rounded-xl p-5 flex flex-col justify-between hover:border-cyan-400/50 transition-colors duration-200">
+                            <div>
+                                <h3 class="text-base font-bold text-white mb-2">Vehicle Detection (Cascade Classifier)</h3>
+                                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                    Deployed visual object identification tracking routines across structural frame blocks. Used S32V234 processors, MATLAB, and the S32 Vision Toolbox to isolate vehicles in active video tracks driven by HOG feature extraction cascades.
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-800/40 font-mono text-[11px] text-slate-500">
+                                <span>C++ / S32 Vision</span>
+                                <a href="https://github.com/Arjun-NA" target="_blank" class="text-cyan-400 hover:underline">Repository &rarr;</a>
+                            </div>
+                        </div>
+
+                        <!-- Project 4 -->
+                        <div class="bg-slate-900/30 border border-slate-800/60 rounded-xl p-5 flex flex-col justify-between hover:border-cyan-400/50 transition-colors duration-200">
+                            <div>
+                                <h3 class="text-base font-bold text-white mb-2">Wireless Parking Access Nodes</h3>
+                                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                    Programmed low-power, thread-safe device routing links operating across 802.15.4 physical radio frequencies. Wrapped communication packet payloads natively over self-healing, mesh-routed Thread Protocol configurations.
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-800/40 font-mono text-[11px] text-slate-500">
+                                <span>Embedded C / Thread Protocol</span>
+                                <a href="https://github.com/Arjun-NA" target="_blank" class="text-cyan-400 hover:underline">Repository &rarr;</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- SECTION 2: PEER-REVIEWED PUBLICATIONS -->
                 <section>
                     <h2 class="tech-heading text-sm font-mono font-bold text-white uppercase tracking-widest mb-6">
                         Peer-Reviewed Publications &amp; Deep Learning Engines
                     </h2>
                     <div class="space-y-6">
+                        
                         <!-- RCNX -->
                         <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-6 relative group hover:border-cyan-500/40 transition-all duration-300">
                             <span class="font-mono text-[9px] bg-cyan-950 text-cyan-400 border border-cyan-800 px-2 py-0.5 rounded-sm absolute top-4 right-4">IEEE Xplore</span>
                             <div class="mb-4">
-                                <span class="font-mono text-xs text-slate-500">[ PAPER_ID: 85748B0E ]</span>
+                                <span class="font-mono text-xs text-slate-500">[ PAPER: RCNX ]</span>
                                 <h3 class="text-lg font-bold text-white mt-1">RCNX: Residual Capsule NeXt</h3>
                                 <p class="font-mono text-xs text-cyan-400">A. N. Anilkumar, M. El-Sharkawy &bull; IEEE IEMTRONICS</p>
                             </div>
                             <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                                Introduced an optimized, high-efficiency Capsule Network architecture deploying structural design space modifications to balance spatial equivariance without massive convolutional parameter explosion. Compressed model footprint down to 1.58M parameters while advancing accuracy bounds to 89.31% on complex dataset matrices.
+                                Explored structural Capsule Network variants to address spatial pose limitations of classical deep neural topologies. Achieved an 89.31% classification accuracy score using highly compressed architecture layers utilizing only 1.58 million parameters.
                             </p>
-                            <div class="flex gap-4 text-xs font-mono">
-                                <a href="https://www.semanticscholar.org/paper/RCNX%3A-Residual-Capsule-NeXt-Anilkumar-El-Sharkawy/85748b0e44747d24610c516ca67fbcdc162fc68e" target="_blank" rel="noopener" class="text-cyan-400 hover:underline"><i class="fa-solid fa-graduation-cap mr-1"></i> Semantic Scholar Abstract</a>
+                            <div class="text-xs font-mono">
+                                <a href="https://www.semanticscholar.org/paper/RCNX%3A-Residual-Capsule-NeXt-Anilkumar-El-Sharkawy/85748b0e44747d24610c516ca67fbcdc162fc68e" target="_blank" rel="noopener" class="text-cyan-400 hover:underline"><i class="fa-solid fa-graduation-cap mr-1"></i> View Abstract via Semantic Scholar</a>
                             </div>
                         </div>
 
@@ -75,18 +143,32 @@
                         <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-6 relative group hover:border-cyan-500/40 transition-all duration-300">
                             <span class="font-mono text-[9px] bg-cyan-950 text-cyan-400 border border-cyan-800 px-2 py-0.5 rounded-sm absolute top-4 right-4">IEEE DTS</span>
                             <div class="mb-4">
-                                <span class="font-mono text-xs text-slate-500">[ PAPER_ID: 4FC438DF ]</span>
+                                <span class="font-mono text-xs text-slate-500">[ PAPER: RCN2 ]</span>
                                 <h3 class="text-lg font-bold text-white mt-1">RCN2: Residual Capsule Network V2</h3>
-                                <p class="font-mono text-xs text-cyan-400">A. N. Anilkumar, M. El-Sharkawy &bull; IEEE International Conference on Design &amp; Test</p>
+                                <p class="font-mono text-xs text-cyan-400">A. N. Anilkumar, M. El-Sharkawy &bull; Design &amp; Test Conference</p>
                             </div>
                             <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                                Authored algorithmic solutions updating foundational routing-by-agreement processing layers. Leveraged unified ResNet-to-Capsule framework topologies to minimize gradient attenuation across deeper feature classification layers, locking in an 85.12% categorization mapping baseline.
+                                Researched framework combinations bridging deep ResNet layer connections over structural Capsule clusters to mitigate internal gradient tracking drop-offs, yielding an 85.12% accuracy footprint under 1.95 million configurations.
                             </p>
+                            <div class="text-xs font-mono">
+                                <a href="https://scholarworks.indianapolis.iu.edu/bitstreams/4fc438df-4ef4-4c3a-b92f-1268587b6b20/download" target="_blank" rel="noopener" class="text-cyan-400 hover:underline"><i class="fa-solid fa-file-pdf mr-1"></i> Download Pre-Print Document</a>
+                            </div>
                         </div>
+
                     </div>
                 </section>
+
+                <footer class="pt-8 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
+                    <p>&copy; 2026 Arjun-NA. Repository Control Console.</p>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/Arjun-NA" target="_blank" class="hover:text-cyan-400 transition-colors">GitHub</a>
+                        <a href="https://www.linkedin.com/in/arjunnapmna/" target="_blank" class="hover:text-cyan-400 transition-colors">LinkedIn</a>
+                    </div>
+                </footer>
+
             </main>
         </div>
     </div>
+
 </body>
 </html>
