@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
-            theme: { extend: { fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } } }
+            theme: { extend: { fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'], body: ['Inter', 'sans-serif'] } } }
         }
     </script>
     <style>
@@ -61,11 +61,11 @@
                         <div class="bg-slate-900/30 border border-slate-800/60 rounded-xl p-5 flex flex-col justify-between hover:border-cyan-400/50 transition-colors duration-200">
                             <div>
                                 <h3 class="text-base font-bold text-white mb-2">Adaptive Cruise Control System</h3>
-                                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                <p class="text-xs text-slate-400 leading-relaxed mb-4 font-body">
                                     Designed and developed an Adaptive Cruise Control system using NXP S32K144 EVB boards and the MOTOGD-DEVKIT shield. Integrated logic targets seamlessly utilizing MATLAB Simulink Model-Based Design Toolbox and the S32 Design Studio IDE.
                                 </p>
                             </div>
-                            <div class="flex items-center justify-between pt-4 border-t border-slate-800/40 font-mono text-[11px] text-slate-500">
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-800/40 font-body text-[11px] text-slate-500">
                                 <span>MATLAB / S32 IDE</span>
                                 <a href="https://github.com/Arjun-NA" target="_blank" class="text-cyan-400 hover:underline">Repository &rarr;</a>
                             </div>
@@ -75,11 +75,11 @@
                         <div class="bg-slate-900/30 border border-slate-800/60 rounded-xl p-5 flex flex-col justify-between hover:border-cyan-400/50 transition-colors duration-200">
                             <div>
                                 <h3 class="text-base font-bold text-white mb-2">Advanced Emergency Vehicle Detection</h3>
-                                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                <p class="text-xs text-slate-400 leading-relaxed mb-4 font-body">
                                     Improved emergency vehicle detection at traffic intersections using automatic gain control, low-noise microphones, bandpass filtering, and sound localization techniques to automate traffic light control. Configured physical filters via MATLAB Filter Designer, NXP FRDM-K64F, and MCUXpresso IDE.
                                 </p>
                             </div>
-                            <div class="flex items-center justify-between pt-4 border-t border-slate-800/40 font-mono text-[11px] text-slate-500">
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-800/40 font-body text-[11px] text-slate-500">
                                 <span>NXP K64F / Audio Signals</span>
                                 <a href="https://github.com/Arjun-NA" target="_blank" class="text-cyan-400 hover:underline">Repository &rarr;</a>
                             </div>
@@ -89,11 +89,11 @@
                         <div class="bg-slate-900/30 border border-slate-800/60 rounded-xl p-5 flex flex-col justify-between hover:border-cyan-400/50 transition-colors duration-200">
                             <div>
                                 <h3 class="text-base font-bold text-white mb-2">Vehicle Detection (Cascade Classifier)</h3>
-                                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                <p class="text-xs text-slate-400 leading-relaxed mb-4 font-body">
                                     Deployed visual object identification tracking routines across structural frame blocks. Used S32V234 processors, MATLAB, and the S32 Vision Toolbox to isolate vehicles in active video tracks driven by HOG feature extraction cascades.
                                 </p>
                             </div>
-                            <div class="flex items-center justify-between pt-4 border-t border-slate-800/40 font-mono text-[11px] text-slate-500">
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-800/40 font-body text-[11px] text-slate-500">
                                 <span>C++ / S32 Vision</span>
                                 <a href="https://github.com/Arjun-NA" target="_blank" class="text-cyan-400 hover:underline">Repository &rarr;</a>
                             </div>
@@ -103,11 +103,11 @@
                         <div class="bg-slate-900/30 border border-slate-800/60 rounded-xl p-5 flex flex-col justify-between hover:border-cyan-400/50 transition-colors duration-200">
                             <div>
                                 <h3 class="text-base font-bold text-white mb-2">Wireless Parking Access Nodes</h3>
-                                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                <p class="text-xs text-slate-400 leading-relaxed mb-4 font-body">
                                     Programmed low-power, thread-safe device routing links operating across 802.15.4 physical radio frequencies. Wrapped communication packet payloads natively over self-healing, mesh-routed Thread Protocol configurations.
                                 </p>
                             </div>
-                            <div class="flex items-center justify-between pt-4 border-t border-slate-800/40 font-mono text-[11px] text-slate-500">
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-800/40 font-body text-[11px] text-slate-500">
                                 <span>Embedded C / Thread Protocol</span>
                                 <a href="https://github.com/Arjun-NA" target="_blank" class="text-cyan-400 hover:underline">Repository &rarr;</a>
                             </div>
@@ -131,7 +131,7 @@
                                 <h3 class="text-lg font-bold text-white mt-1">RCNX: Residual Capsule NeXt</h3>
                                 <p class="font-mono text-xs text-cyan-400">A. N. Anilkumar, M. El-Sharkawy &bull; IEEE IEMTRONICS</p>
                             </div>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                            <p class="text-sm text-slate-400 leading-relaxed mb-4 font-body">
                                 Explored structural Capsule Network variants to address spatial pose limitations of classical deep neural topologies. Achieved an 89.31% classification accuracy score using highly compressed architecture layers utilizing only 1.58 million parameters.
                             </p>
                             <div class="text-xs font-mono">
@@ -147,7 +147,7 @@
                                 <h3 class="text-lg font-bold text-white mt-1">RCN2: Residual Capsule Network V2</h3>
                                 <p class="font-mono text-xs text-cyan-400">A. N. Anilkumar, M. El-Sharkawy &bull; Design &amp; Test Conference</p>
                             </div>
-                            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                            <p class="text-sm text-slate-400 leading-relaxed mb-4 font-body">
                                 Researched framework combinations bridging deep ResNet layer connections over structural Capsule clusters to mitigate internal gradient tracking drop-offs, yielding an 85.12% accuracy footprint under 1.95 million configurations.
                             </p>
                             <div class="text-xs font-mono">
