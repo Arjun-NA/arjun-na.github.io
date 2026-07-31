@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjun-NA | Hardware Repositories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .tech-heading::before { content: ">> "; color: #22d3ee; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-400 min-h-screen selection:bg-cyan-500/30 selection:text-cyan-200">
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-8 lg:py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            
+            <!-- LEFT PANEL (SAME STICKY) -->
+            <header class="lg:col-span-4 lg:sticky lg:top-16 bg-slate-900/30 backdrop-blur-md border border-slate-800/60 rounded-xl p-6 lg:p-8 shadow-2xl">
+                <div class="font-mono text-[10px] text-slate-500 mb-4 tracking-widest uppercase flex items-center gap-2">
+                    <i class="fa-solid fa-microchip text-cyan-400"></i> [ NODE: SYS_ACTIVE ]
+                </div>
+                <h1 class="text-3xl font-bold text-white tracking-tight font-mono mb-1">Arjun-NA</h1>
+                <p class="text-sm font-medium text-cyan-400 font-mono mb-6">&gt;_ Firmware Repositories</p>
+                <p class="text-sm leading-relaxed text-slate-400 mb-8">
+                    Deep dive logs profiling custom micro-controllers, advanced RTOS communication meshes, and deep learning signal pipelines.
+                </p>
+                <div class="flex flex-col gap-3">
+                    <a href="contact.html" class="w-full text-center font-mono text-sm font-medium bg-cyan-400 text-slate-950 px-5 py-3 rounded-md hover:bg-white transition-all duration-200">
+                        <i class="fa-solid fa-terminal mr-2"></i> Inquire / Hire
+                    </a>
+                </div>
+            </header>
+
+            <!-- RIGHT PANEL -->
+            <main class="lg:col-span-8 space-y-12 lg:space-y-16">
+                <nav class="flex gap-4 border-b border-slate-800 pb-4 font-mono text-xs tracking-wider">
+                    <a href="index.html" class="text-slate-500 hover:text-slate-300 transition-colors"><i class="fa-solid fa-folder mr-1"></i> // CORE</a>
+                    <a href="projects.html" class="text-cyan-400 border-b border-cyan-400 pb-4 -mb-[17px] font-bold"><i class="fa-solid fa-diagram-project mr-1"></i> // REPOS</a>
+                    <a href="contact.html" class="text-slate-500 hover:text-slate-300 transition-colors"><i class="fa-solid fa-envelope mr-1"></i> // COMM</a>
+                </nav>
+
+                <!-- ADVANCED THESIS SECTION -->
+                <section>
+                    <div class="bg-gradient-to-r from-slate-900/50 to-slate-900/10 border border-slate-800 border-l-4 border-l-cyan-400 rounded-r-xl p-6">
+                        <span class="font-mono text-xs text-cyan-400 tracking-widest block mb-2">[ ADVANCED MACHINE LEARNING ]</span>
+                        <h3 class="text-xl font-bold text-white font-mono mb-2">M.S. Thesis: RCNX — Residual Capsule Next</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Explored Capsule Network setups targeting classical CNN failures regarding complex image perspective, pose tracking, and vector transformations. Developed custom optimization variants <span class="text-cyan-400 font-mono">RCN2</span> (85.12% accuracy across 1.95M parameters) and <span class="text-white font-mono">RCNX</span> (89.31% accuracy across 1.58M parameters).
+                        </p>
+                    </div>
+                </section>
+
+                <!-- CARD REPOSITORY MATRIX -->
+                <section>
+                    <h2 class="tech-heading text-sm font-mono font-bold text-white uppercase tracking-widest mb-6">Firmware Repositories &amp; Hardware Targets</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <!-- Repo Card 1 -->
+                        <div class="bg-slate-900/30 border border-slate-800 rounded-xl overflow-hidden group hover:border-cyan-400/40 transition-all duration-300 flex flex-col justify-between">
+                            <div class="p-5">
+                                <div class="flex items-center justify-between mb-3">
+                                    <h4 class="text-white font-bold font-mono text-sm">Adaptive Cruise Control</h4>
+                                    <i class="fa-brands fa-github text-slate-600 group-hover:text-cyan-400 transition-colors"></i>
+                                </div>
+                                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                    Asynchronous real-time velocity optimization tracking engine utilizing NXP S32K144 EVB architecture integrated with MOTOGD-DEVKIT hardware feedback loops mapped inside MATLAB Simulink environments.
+                                </p>
+                            </div>
+                            <div class="p-4 bg-slate-900/50 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono">
+                                <span class="text-slate-500">NXP / MATLAB S32</span>
+                                <a href="https://github.com/Arjun-NA" target="_blank" class="text-cyan-400 hover:underline">Verify Source &rarr;</a>
+                            </div>
+                        </div>
+
+                        <!-- Repo Card 2 -->
+                        <div class="bg-slate-900/30 border border-slate-800 rounded-xl overflow-hidden group hover:border-cyan-400/40 transition-all duration-300 flex flex-col justify-between">
+                            <div class="p-5">
+                                <div class="flex items-center justify-between mb-3">
+                                    <h4 class="text-white font-bold font-mono text-sm">Emergency Vehicle Detection</h4>
+                                    <i class="fa-brands fa-github text-slate-600 group-hover:text-cyan-400 transition-colors"></i>
+                                </div>
+                                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                    Automated priority crossing controls mapped to NXP FRDM-K64F node cards. Leverages low-noise sensor configurations, directional filtering arrays, and hardware automated signal state shifts.
+                                </p>
+                            </div>
+                            <div class="p-4 bg-slate-900/50 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono">
+                                <span class="text-slate-500">Embedded C / MCUXpresso</span>
+                                <a href="https://github.com/Arjun-NA" target="_blank" class="text-cyan-400 hover:underline">Verify Source &rarr;</a>
+                            </div>
+                        </div>
+
+                        <!-- Repo Card 3 -->
+                        <div class="bg-slate-900/30 border border-slate-800 rounded-xl overflow-hidden group hover:border-cyan-400/40 transition-all duration-300 flex flex-col justify-between">
+                            <div class="p-5">
+                                <div class="flex items-center justify-between mb-3">
+                                    <h4 class="text-white font-bold font-mono text-sm">Wireless Node Mesh Matrix</h4>
+                                    <i class="fa-brands fa-github text-slate-600 group-hover:text-cyan-400 transition-colors"></i>
+                                </div>
+                                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                    Ultra low-overhead radio transmission stack layers written over 802.15.4 physical frequencies. Anchored on an active Thread protocol infrastructure layout routing node configurations.
+                                </p>
+                            </div>
+                            <div class="p-4 bg-slate-900/50 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono">
+                                <span class="text-slate-500">6LoWPAN / Thread Mesh</span>
+                                <a href="https://github.com/Arjun-NA" target="_blank" class="text-cyan-400 hover:underline">Verify Source &rarr;</a>
+                            </div>
+                        </div>
+
+                        <!-- Repo Card 4 -->
+                        <div class="bg-slate-900/30 border border-slate-800 rounded-xl overflow-hidden group hover:border-cyan-400/40 transition-all duration-300 flex flex-col justify-between">
+                            <div class="p-5">
+                                <div class="flex items-center justify-between mb-3">
+                                    <h4 class="text-white font-bold font-mono text-sm">Vision Cascade Tracking</h4>
+                                    <i class="fa-brands fa-github text-slate-600 group-hover:text-cyan-400 transition-colors"></i>
+                                </div>
+                                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                                    Structural multi-lane feature classification code processing blocks executed on NXP S32V234 hardware. Pulls HOG array parameters using integrated MATLAB Vision toolchains.
+                                </p>
+                            </div>
+                            <div class="p-4 bg-slate-900/50 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono">
+                                <span class="text-slate-500">C++ / S32 Vision Toolkit</span>
+                                <a href="https://github.com/Arjun-NA" target="_blank" class="text-cyan-400 hover:underline">Verify Source &rarr;</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
