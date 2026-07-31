@@ -3,36 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Communications Terminal</title>
+    <title>Arjun-NA | Secure Communications Terminal</title>
+    <!-- Corrected Production Tailwind CDN -->
     <script src="https://tailwindcss.com"></script>
+    <!-- Corrected Production Font Awesome CDN -->
     <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Google Fonts Subdomains Corrected -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } } }
+        }
+    </script>
     <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .tech-heading::before { content: ">> "; color: #22d3ee; }
+        /* Honeypot field configuration - keeps field invisible to humans, visible to dumb bots */
         .hidden-security-trap { display: none !important; visibility: hidden !important; opacity: 0 !important; }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-400">
-    <div class="max-w-4xl mx-auto p-6">
-        <h1 class="text-3xl font-bold text-white mb-6">Contact</h1>
-        
-        <!-- Secure Contact Form -->
-        <form action="https://formspree.io/f/xrenvajv" method="POST" id="commsForm" class="space-y-4">
-            <!-- Honeypot Field -->
-            <div class="hidden-security-trap">
-                <input type="text" name="system_auth_token" tabindex="-1">
-            </div>
+<body class="bg-slate-950 text-slate-400 min-h-screen selection:bg-cyan-500/30 selection:text-cyan-200">
 
-            <input type="text" name="name" placeholder="Name" required class="w-full bg-slate-900 p-3 rounded">
-            <input type="email" name="_replyto" placeholder="Email" required class="w-full bg-slate-900 p-3 rounded">
-            <textarea name="message" placeholder="Message" required class="w-full bg-slate-900 p-3 rounded"></textarea>
+    <!-- Subtle Engineering Dot Matrix Grid Layer -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 py-8 lg:py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
-            <button type="submit" class="bg-cyan-500 text-slate-950 px-6 py-2 rounded">Submit</button>
-        </form>
+            <!-- LEFT PROFILE SIDEBAR (Persistent Theme Layout) -->
+            <header class="lg:col-span-4 lg:sticky lg:top-16 bg-slate-900/30 backdrop-blur-md border border-slate-800/60 rounded-xl p-6 lg:p-8 shadow-2xl">
+                <div class="font-mono text-[10px] text-slate-500 mb-4 tracking-widest uppercase flex items-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-cyan-400"></i> [ SECURE_COMMS_NODE ]
+                </div>
+                <h1 class="text-3xl font-bold text-white tracking-tight font-mono mb-1">Arjun-NA</h1>
+                <p class="text-sm font-medium text-cyan-400 font-mono mb-6">// Communications Registry</p>
+                <div class="flex flex-col gap-3">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" class="w-full text-center font-mono text-sm font-medium bg-slate-900/60 text-white border border-slate-700/80 px-5 py-3 rounded-md hover:border-cyan-400 hover:text-cyan-400 transition-all duration-200">
+                        <i class="fa-brands fa-linkedin-in mr-2"></i> Verified LinkedIn
+                    </a>
+                </div>
+            </header>
+
+            <!-- RIGHT CONTENT COLUMN -->
+            <main class="lg:col-span-8 space-y-12">
+                
+                <!-- GLOBAL NAVIGATION BAR (Lowercase Fix Applied) -->
+                <nav class="flex gap-4 border-b border-slate-800 pb-4 font-mono text-xs tracking-wider">
+                    <a href="index.html" class="text-slate-500 hover:text-slate-300 transition-colors"><i class="fa-solid fa-folder mr-1"></i> // CORE</a>
+                    <a href="projects.html" class="text-slate-500 hover:text-slate-300 transition-colors"><i class="fa-solid fa-diagram-project mr-1"></i> // REPOS</a>
+                    <a href="contact.html" class="text-cyan-400 border-b border-cyan-400 pb-4 -mb-[17px] font-bold"><i class="fa-solid fa-envelope mr-1"></i> // COMM</a>
+                </nav>
+
+                <!-- INPUT VALIDATION FORM NODE -->
+                <section>
+                    <h2 class="tech-heading text-sm font-mono font-bold text-white uppercase tracking-widest mb-6">
+                        Inbound Payload Encryption Form
+                    </h2>
+
+                    <!-- Formspree Endpoint hardcoded with token: xrenvajv -->
+                    <form action="https://formspree.io/f/xrenvajv" method="POST" id="commsForm" class="space-y-6 bg-slate-900/20 border border-slate-800/40 rounded-xl p-6 lg:p-8">
+                        
+                        <!-- 🚨 HONEYPOT SPAM PROTECTION FIELD -->
+                        <div class="hidden-security-trap">
+                            <label for="system_auth_token">System Metadata Security Trap (Leave Blank)</label>
+                            <input type="text" id="system_auth_token" name="system_auth_token" autocomplete="off" tabindex="-1">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block font-mono text-xs text-slate-400 uppercase tracking-wider mb-2" for="name">Sender Name / Entity</label>
+                                <input type="text" id="name" name="name" required maxlength="100" class="w-full bg-slate-950 border border-slate-800 rounded px-4 py-2.5 text-white font-mono text-sm focus:outline-none focus:border-cyan-400 transition-colors" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block font-mono text-xs text-slate-400 uppercase tracking-wider mb-2" for="email">Return Net Address (Email)</label>
+                                <input type="email" id="email" name="_replyto" required maxlength="150" class="w-full bg-slate-950 border border-slate-800 rounded px-4 py-2.5 text-white font-mono text-sm focus:outline-none focus:border-cyan-400 transition-colors" placeholder="name@domain.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block font-mono text-xs text-slate-400 uppercase tracking-wider mb-2" for="message">Payload Description (Message)</label>
+                            <textarea id="message" name="message" required maxlength="3000" rows="6" class="w-full bg-slate-950 border border-slate-800 rounded px-4 py-2.5 text-white font-mono text-sm focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Establish connection specifications or project payload details..."></textarea>
+                        </div>
+
+                        <div class="pt-2">
+                            <button type="submit" class="w-full md:w-auto font-mono text-sm font-medium bg-cyan-400 text-slate-950 px-6 py-3 rounded hover:bg-white hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all duration-200">
+                                <i class="fa-solid fa-paper-plane mr-2"></i> Transmit Packet
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </div>
     </div>
 
+    <!-- Client-Side Honeypot Enforcement Script -->
     <script>
         document.getElementById('commsForm').addEventListener('submit', function(e) {
-            if (document.querySelector('[name="system_auth_token"]').value !== "") {
-                e.preventDefault();
+            const trap = document.getElementById('system_auth_token').value;
+            if (trap !== "") {
+                e.preventDefault(); // Stop processing bot input entirely
+                alert("Security alert: Automatic script ingestion blocked.");
                 return false;
             }
         });
