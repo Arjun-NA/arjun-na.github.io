@@ -1,326 +1,461 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arjun-NA | Freelance Embedded Systems & Firmware Engineer</title>
-    <!-- Google Fonts for crisp technical typography -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* --- DESIGN SYSTEM CONFIGURATION --- */
-        :root {
-            --bg-main: #0d0f12;       /* Ultra-dark slate gray background */
-            --bg-card: #161a1f;       /* Terminal card background */
-            --bg-tag: #1f262e;        /* Skill tag background */
-            --accent: #00f2fe;        /* Oscilloscope Cyan */
-            --text-heading: #ffffff;  /* Primary headers */
-            --text-body: #94a3b8;     /* Secondary content text */
-            --text-muted: #64748b;    /* Metadata / labels */
-            --border: #262f3a;        /* Circuit grid line color */
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Arjun-NA — Senior Embedded Systems & Firmware Engineer specializing in high-speed optical systems, multiprocessor firmware, distributed networks, and embedded machine learning."
+  />
+  <meta name="theme-color" content="#020617" />
+  <title>Arjun-NA | Embedded Systems & Firmware Engineer</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
-        body {
-            background-color: var(--bg-main);
-            color: var(--text-body);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            line-height: 1.6;
-            padding: 2rem 1rem;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        /* --- TYPOGRAPHY & UTILITIES --- */
-        h1, h2, h3, .mono {
-            font-family: 'JetBrains Mono', monospace;
-            color: var(--text-heading);
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px dashed var(--border);
-            padding-bottom: 0.5rem;
-        }
-
-        h2::before {
-            content: ":: ";
-            color: var(--accent);
-        }
-
-        section {
-            margin-bottom: 4rem;
-        }
-
-        /* --- HERO HEADER SECTION --- */
-        header {
-            text-align: left;
-            margin-bottom: 4rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .meta-location {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 0.5rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-            letter-spacing: -1px;
-        }
-
-        .title-sub {
-            font-size: 1.25rem;
-            color: var(--accent);
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-        }
-
-        .bio {
-            max-width: 700px;
-            font-size: 1.05rem;
-            color: var(--text-body);
-            margin-bottom: 2rem;
-        }
-
-        /* Interactive Buttons */
-        .btn-group {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9rem;
-            font-weight: 500;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.2s ease;
-        }
-
-        .btn-primary {
-            background-color: var(--accent);
-            color: var(--bg-main);
-        }
-
-        .btn-primary:hover {
-            background-color: #ffffff;
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
-        }
-
-        .btn-secondary {
-            border: 1px solid var(--border);
-            color: var(--text-heading);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        /* --- SKILLS LAYERED GRID --- */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .skill-layer {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 1.5rem;
-        }
-
-        .skill-layer h3 {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            color: var(--accent);
-        }
-
-        .tag-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .tag {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            background-color: var(--bg-tag);
-            color: var(--text-heading);
-            padding: 0.25rem 0.6rem;
-            border-radius: 4px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        /* --- PORTFOLIO PROJECT CARDS --- */
-        .project-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        @media (min-width: 768px) {
-            .project-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .project-card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-2px);
-            border-color: var(--accent);
-        }
-
-        .project-card h3 {
-            font-size: 1.15rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .project-card p {
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .project-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            padding-top: 0.75rem;
-        }
-
-        /* --- FOOTER AVAILABILITY --- */
-        footer {
-            margin-top: 6rem;
-            padding: 2rem 0;
-            border-top: 1px solid var(--border);
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        @media (min-width: 600px) {
-            footer {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-            }
-        }
-
-        .services-notice h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .services-notice p {
-            font-size: 0.9rem;
-            max-width: 500px;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 1.5rem;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9rem;
-        }
-
-        .footer-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent);
-        }
-    </style>
+  <script src="https://tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(34,211,238,.25), 0 0 35px rgba(34,211,238,.15)',
+            panel: '0 22px 80px rgba(2, 6, 23, .45)',
+          },
+          backgroundImage: {
+            grid:
+              'linear-gradient(rgba(51,65,85,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(51,65,85,.12) 1px, transparent 1px)',
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body>
 
-    <div class="container">
-        
-        <!-- HERO HEADER -->
-        <header>
-            <div class="meta-location">[ LOC: CALIFORNIA, USA // TZ: PST ]</div>
-            <h1>Arjun-NA</h1>
-            <div class="title-sub">Freelance Embedded Systems & Firmware Engineer</div>
-            <p class="bio">
-                Electronics Engineer specializing in low-level firmware, driver development, and hardware-software co-design. I help hardware teams, R&D labs, and tech startups translate complex physical concepts into high-performing, optimized production code.
-            </p>
-            <div class="btn-group">
-                <a href="mailto:your-email@example.com" class="btn btn-primary">&gt;_ Hire / Inquire</a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn Profile</a>
-            </div>
-        </header>
+<body class="min-h-screen overflow-x-hidden bg-slate-950 font-sans text-slate-300 antialiased selection:bg-cyan-400 selection:text-slate-950">
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-20 bg-slate-950"></div>
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 bg-grid bg-[size:42px_42px] [mask-image:linear-gradient(to_bottom,black,transparent_92%)]"></div>
+  <div aria-hidden="true" class="pointer-events-none fixed left-1/2 top-0 -z-10 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[130px]"></div>
+  <div aria-hidden="true" class="pointer-events-none fixed bottom-0 right-0 -z-10 h-80 w-80 rounded-full bg-teal-500/5 blur-[120px]"></div>
 
-        <!-- CORE SPECIALIZATIONS MATRIX -->
-        <section id="skills">
-            <h2>Technical Architecture</h2>
-            <div class="skills-grid">
-                <div class="skill-layer">
-                    <h3>01 / Firmware & RTOS</h3>
-                    <div class="tag-container">
-                        <span class="tag">Embedded C/C++</span>
-                        <span class="tag">Assembly</span>
-                        <span class="tag">Bare-Metal Development</span>
-                        <span class="tag">FreeRTOS</span>
-                    </div>
-                </div>
-                <div class="skill-layer">
-                    <h3>02 / Infrastructure Protocols</h3>
-                    <div class="tag-container">
-                        <span class="tag">802.15.4 Radio</span>
-                        <span class="tag">Thread Protocol</span>
-                        <span class="tag">I2C / SPI / UART</span>
-                        <span class="tag">Mesh Networking</span>
-                    </div>
-                </div>
-                <div class="skill-layer">
-                    <h3>03 / Hardware & Tools</h3>
-                    <div class="tag-container">
-                        <span class="tag">PCB Design / Routing</span>
-                        <span class="tag">Prolog Paradigms</span>
-                        <span class="tag">MATLAB Architectures</span>
-                        <span class="tag">MCU Debugging</span>
-                    </div>
-                </div>
+  <a
+    href="#main-content"
+    class="sr-only z-50 rounded-lg bg-cyan-400 px-4 py-2 font-mono text-sm font-bold text-slate-950 focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+  >
+    Skip to content
+  </a>
+
+  <main id="main-content" class="mx-auto max-w-[1520px] px-4 py-5 sm:px-6 sm:py-8 lg:px-8 lg:py-10">
+    <div class="grid gap-6 lg:grid-cols-[minmax(300px,390px)_minmax(0,1fr)] xl:gap-8">
+
+      <!-- Sticky profile sidebar -->
+      <aside class="lg:sticky lg:top-8 lg:h-[calc(100vh-4rem)]">
+        <section class="relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-800/90 bg-slate-900/55 p-6 shadow-panel backdrop-blur-2xl sm:p-8">
+          <div aria-hidden="true" class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/80 to-transparent"></div>
+          <div aria-hidden="true" class="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-cyan-400/10 blur-3xl"></div>
+
+          <div class="relative flex flex-1 flex-col">
+            <div class="mb-8 flex items-center justify-between">
+              <div class="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-3 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-cyan-300">
+                <span class="relative flex h-2 w-2">
+                  <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75"></span>
+                  <span class="relative inline-flex h-2 w-2 rounded-full bg-cyan-400"></span>
+                </span>
+                System Online
+              </div>
+              <span class="font-mono text-[11px] text-slate-600">REV.2026</span>
             </div>
+
+            <div>
+              <p class="mb-3 font-mono text-xs uppercase tracking-[0.28em] text-cyan-400">Embedded Systems Portfolio</p>
+              <h1 class="text-4xl font-extrabold tracking-[-0.04em] text-white sm:text-5xl lg:text-[3.35rem] lg:leading-[1.02]">
+                Arjun<span class="text-cyan-400">-NA</span>
+              </h1>
+              <h2 class="mt-4 max-w-sm text-lg font-semibold leading-snug text-slate-200">
+                Senior Embedded Systems &amp; Firmware Engineer
+              </h2>
+
+              <div class="mt-6 rounded-2xl border border-slate-800 bg-slate-950/55 p-4">
+                <p class="font-mono text-xs leading-6 text-cyan-300">
+                  LOC: CARLSBAD, CA <span class="text-slate-600">//</span> TZ: PST
+                </p>
+              </div>
+
+              <p class="mt-6 text-[15px] leading-7 text-slate-400">
+                Over 7 years of engineering expertise deploying thread-safe, multi-processor firmware architectures.
+                Specializing in high-speed optical hardware enablement, distributed network systems, and algorithmic
+                embedded machine learning systems.
+              </p>
+            </div>
+
+            <div class="mt-8 grid gap-3">
+              <a
+                href="mailto:your-email@example.com"
+                class="group inline-flex items-center justify-center gap-2 rounded-xl border border-cyan-300 bg-cyan-400 px-5 py-3.5 font-mono text-sm font-bold text-slate-950 shadow-glow transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-slate-950"
+              >
+                <span>&gt;_</span>
+                Inquire / Hire
+                <svg class="h-4 w-4 transition group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
+                </svg>
+              </a>
+
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-5 py-3.5 font-mono text-sm font-semibold text-slate-200 transition duration-300 hover:-translate-y-0.5 hover:border-cyan-400/60 hover:text-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-950"
+              >
+                LinkedIn Profile
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 5h6v6M19 5 10 14M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="mt-auto pt-10">
+              <div class="h-px bg-gradient-to-r from-slate-800 via-slate-700 to-transparent"></div>
+              <div class="mt-5 flex items-end justify-between gap-4">
+                <p class="font-mono text-[10px] uppercase leading-5 tracking-[0.18em] text-slate-600">
+                  Firmware<br />Systems<br />Research
+                </p>
+                <div class="flex items-end gap-1" aria-hidden="true">
+                  <span class="h-3 w-1 rounded-full bg-cyan-400/40"></span>
+                  <span class="h-6 w-1 rounded-full bg-cyan-400/60"></span>
+                  <span class="h-4 w-1 rounded-full bg-cyan-400/50"></span>
+                  <span class="h-9 w-1 rounded-full bg-cyan-400"></span>
+                  <span class="h-5 w-1 rounded-full bg-cyan-400/60"></span>
+                  <span class="h-7 w-1 rounded-full bg-cyan-400/80"></span>
+                  <span class="h-3 w-1 rounded-full bg-cyan-400/40"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Main content -->
+      <div class="min-w-0 space-y-6">
+
+        <!-- Technical layers -->
+        <section aria-labelledby="technical-layers" class="rounded-3xl border border-slate-800/90 bg-slate-900/45 p-5 shadow-panel backdrop-blur-xl sm:p-7 lg:p-8">
+          <div class="mb-7 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p class="font-mono text-xs uppercase tracking-[0.24em] text-cyan-400">01 / Systems Matrix</p>
+              <h2 id="technical-layers" class="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                Core Technical Layers
+              </h2>
+            </div>
+            <p class="font-mono text-[11px] uppercase tracking-[0.14em] text-slate-600">Stack integrity: verified</p>
+          </div>
+
+          <div class="grid gap-4 xl:grid-cols-3">
+            <article class="group rounded-2xl border border-slate-800 bg-slate-950/50 p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-slate-950/75">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-cyan-400">Layer 01</p>
+                  <h3 class="mt-2 text-lg font-bold text-white">Execution &amp; OS</h3>
+                </div>
+                <span class="font-mono text-xs text-slate-700">0x01</span>
+              </div>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-lg border border-cyan-400/20 bg-cyan-400/5 px-3 py-2 font-mono text-xs text-cyan-200">C · 7+ Yrs</span>
+                <span class="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-xs text-slate-300">Python · 7+ Yrs</span>
+                <span class="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-xs text-slate-300">C++ · Familiar</span>
+                <span class="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-xs text-slate-300">ThreadX RTOS</span>
+                <span class="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-xs text-slate-300">Bare-Metal Systems</span>
+              </div>
+            </article>
+
+            <article class="group rounded-2xl border border-slate-800 bg-slate-950/50 p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-slate-950/75">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-cyan-400">Layer 02</p>
+                  <h3 class="mt-2 text-lg font-bold text-white">Interconnect Protocols</h3>
+                </div>
+                <span class="font-mono text-xs text-slate-700">0x02</span>
+              </div>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-xs text-slate-300">BLE</span>
+                <span class="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-xs text-slate-300">6LoWPAN</span>
+                <span class="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-xs text-slate-300">TCP/IP</span>
+                <span class="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-xs text-slate-300">CAN</span>
+                <span class="rounded-lg border border-cyan-400/20 bg-cyan-400/5 px-3 py-2 font-mono text-xs text-cyan-200">SGMII</span>
+                <span class="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-xs text-slate-300">I2C</span>
+                <span class="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-xs text-slate-300">SPI</span>
+                <span class="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-xs text-slate-300">UART</span>
+              </div>
+            </article>
+
+            <article class="group rounded-2xl border border-slate-800 bg-slate-950/50 p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-slate-950/75">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-cyan-400">Layer 03</p>
+                  <h3 class="mt-2 text-lg font-bold text-white">IDEs &amp; Ecosystems</h3>
+                </div>
+                <span class="font-mono text-xs text-slate-700">0x03</span>
+              </div>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-lg border border-cyan-400/20 bg-cyan-400/5 px-3 py-2 font-mono text-xs text-cyan-200">Windsurf</span>
+                <span class="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-xs text-slate-300">Vim</span>
+                <span class="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-xs text-slate-300">VSCode</span>
+                <span class="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-xs text-slate-300">MATLAB / Simulink</span>
+                <span class="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-xs text-slate-300">Proteus</span>
+                <span class="rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2 font-mono text-xs text-slate-300">Eagle CAD</span>
+              </div>
+            </article>
+          </div>
         </section>
 
+        <!-- Work history -->
+        <section aria-labelledby="milestones" class="rounded-3xl border border-slate-800/90 bg-slate-900/45 p-5 shadow-panel backdrop-blur-xl sm:p-7 lg:p-8">
+          <div class="mb-8">
+            <p class="font-mono text-xs uppercase tracking-[0.24em] text-cyan-400">02 / Deployment History</p>
+            <h2 id="milestones" class="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              Professional Milestones
+            </h2>
+          </div>
+
+          <div class="relative space-y-10 before:absolute before:left-[7px] before:top-2 before:h-[calc(100%-1rem)] before:w-px before:bg-gradient-to-b before:from-cyan-400/70 before:via-slate-700 before:to-transparent">
+            <article class="relative pl-8">
+              <span class="absolute left-0 top-2 h-[15px] w-[15px] rounded-full border-4 border-slate-950 bg-cyan-400 shadow-[0_0_18px_rgba(34,211,238,.65)]"></span>
+              <div class="rounded-2xl border border-slate-800 bg-slate-950/45 p-5 sm:p-6">
+                <div class="flex flex-col gap-3 xl:flex-row xl:items-start xl:justify-between">
+                  <div>
+                    <p class="font-mono text-[11px] uppercase tracking-[0.17em] text-cyan-400">Milestone 01 / Active</p>
+                    <h3 class="mt-2 text-xl font-bold text-white">Senior Software Engineer (Embedded Systems)</h3>
+                    <p class="mt-1 font-semibold text-slate-300">@ MaxLinear, Inc. · Carlsbad, CA</p>
+                  </div>
+                  <span class="w-fit rounded-lg border border-slate-800 bg-slate-900/80 px-3 py-2 font-mono text-xs text-slate-400">07/2021 — Present</span>
+                </div>
+                <ul class="mt-5 space-y-4 text-[15px] leading-7 text-slate-400">
+                  <li class="flex gap-3">
+                    <span class="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
+                    <span>Develop firmware for the High-Speed Interconnect (HSI) portfolio, utilizing advanced PAM4 DSP architectures to drive ultra-high-bandwidth 800G optical datalink pipelines across enterprise data centers.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
+                    <span>Engineer embedded software modules for Remote PHY SoC devices supporting multi-generation video pipelines, DOCSIS 3.0, and DOCSIS 3.1 ecosystems; drive early architectural features for future Distributed Access Architecture (DAA) updates under DOCSIS 4.0 paradigms.</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
+                    <span>Author robust, reentrant, and thread-safe control code patterns in low-overhead C and Python platforms tailored to complex asynchronous multi-processor infrastructure target units.</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="relative pl-8">
+              <span class="absolute left-0 top-2 h-[15px] w-[15px] rounded-full border-4 border-slate-950 bg-slate-600"></span>
+              <div class="rounded-2xl border border-slate-800 bg-slate-950/45 p-5 sm:p-6">
+                <div class="flex flex-col gap-3 xl:flex-row xl:items-start xl:justify-between">
+                  <div>
+                    <p class="font-mono text-[11px] uppercase tracking-[0.17em] text-slate-500">Milestone 02</p>
+                    <h3 class="mt-2 text-xl font-bold text-white">Software Trainee</h3>
+                    <p class="mt-1 font-semibold text-slate-300">@ TIA Pvt Ltd · Bangalore, India</p>
+                  </div>
+                  <span class="w-fit rounded-lg border border-slate-800 bg-slate-900/80 px-3 py-2 font-mono text-xs text-slate-400">08/2017 — 08/2018</span>
+                </div>
+                <p class="mt-5 text-[15px] leading-7 text-slate-400">
+                  Independently engineered and deployed an automated Python tracking tool designed to harvest critical physical runtime asset metrics from industrial PLCs over RS485 communication links into a MySQL database via ODBC.
+                </p>
+              </div>
+            </article>
+
+            <article class="relative pl-8">
+              <span class="absolute left-0 top-2 h-[15px] w-[15px] rounded-full border-4 border-slate-950 bg-slate-600"></span>
+              <div class="rounded-2xl border border-slate-800 bg-slate-950/45 p-5 sm:p-6">
+                <div class="flex flex-col gap-3 xl:flex-row xl:items-start xl:justify-between">
+                  <div>
+                    <p class="font-mono text-[11px] uppercase tracking-[0.17em] text-slate-500">Milestone 03</p>
+                    <h3 class="mt-2 text-xl font-bold text-white">Research Assistant — Machine Learning</h3>
+                    <p class="mt-1 font-semibold text-slate-300">@ IoT Collaboratory, IUPUI · Indianapolis, IN</p>
+                  </div>
+                  <span class="w-fit rounded-lg border border-slate-800 bg-slate-900/80 px-3 py-2 font-mono text-xs text-slate-400">05/2020 — 12/2020</span>
+                </div>
+                <p class="mt-5 text-[15px] leading-7 text-slate-400">
+                  Deployed complex KPConvolution neural network architectures to perform precise automated multi-class spatial classification and drone-captured LiDAR cloud point segmentation tasks.
+                </p>
+              </div>
+            </article>
+
+            <article class="relative pl-8">
+              <span class="absolute left-0 top-2 h-[15px] w-[15px] rounded-full border-4 border-slate-950 bg-slate-600"></span>
+              <div class="rounded-2xl border border-slate-800 bg-slate-950/45 p-5 sm:p-6">
+                <div class="flex flex-col gap-3 xl:flex-row xl:items-start xl:justify-between">
+                  <div>
+                    <p class="font-mono text-[11px] uppercase tracking-[0.17em] text-slate-500">Milestone 04</p>
+                    <h3 class="mt-2 text-xl font-bold text-white">Research Assistant — Software Development</h3>
+                    <p class="mt-1 font-semibold text-slate-300">@ TASI | IUPUI · Indianapolis, IN</p>
+                  </div>
+                  <span class="w-fit rounded-lg border border-slate-800 bg-slate-900/80 px-3 py-2 font-mono text-xs text-slate-400">08/2019 — 05/2020</span>
+                </div>
+                <p class="mt-5 text-[15px] leading-7 text-slate-400">
+                  Led logical pipeline design and software integrations supporting a multi-sensor highway Incident Detection System (IDS) for INDOT utilizing YOLOv4 machine vision classification structures.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Thesis -->
+        <section aria-labelledby="thesis" class="relative overflow-hidden rounded-3xl border border-cyan-400/25 bg-gradient-to-br from-cyan-400/[0.10] via-slate-900/75 to-slate-950 p-6 shadow-glow sm:p-8 lg:p-10">
+          <div aria-hidden="true" class="absolute -right-20 -top-24 h-64 w-64 rounded-full bg-cyan-400/10 blur-3xl"></div>
+          <div class="relative">
+            <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+              <div>
+                <p class="font-mono text-xs uppercase tracking-[0.24em] text-cyan-300">03 / Advanced Academic Research</p>
+                <h2 id="thesis" class="mt-3 text-3xl font-extrabold tracking-[-0.03em] text-white sm:text-4xl">
+                  M.S. Thesis: <span class="text-cyan-400">RCNX</span> — Residual Capsule Next
+                </h2>
+                <p class="mt-3 font-mono text-xs uppercase tracking-[0.14em] text-slate-500">
+                  Purdue University Indianapolis // Advanced Deep Learning
+                </p>
+              </div>
+              <div class="grid shrink-0 grid-cols-2 gap-3">
+                <div class="rounded-xl border border-slate-700/80 bg-slate-950/60 p-4 text-center">
+                  <p class="font-mono text-2xl font-bold text-cyan-300">89.31%</p>
+                  <p class="mt-1 text-xs uppercase tracking-wider text-slate-500">Accuracy</p>
+                </div>
+                <div class="rounded-xl border border-slate-700/80 bg-slate-950/60 p-4 text-center">
+                  <p class="font-mono text-2xl font-bold text-cyan-300">1.58M</p>
+                  <p class="mt-1 text-xs uppercase tracking-wider text-slate-500">Parameters</p>
+                </div>
+              </div>
+            </div>
+            <p class="mt-7 max-w-5xl text-[15px] leading-8 text-slate-300">
+              Investigated Capsule Network layers to resolve classical convolutional downscaling weaknesses tied to spatial orientation, translation tracking, and strict 3D object pose configuration shifts. Designed structural layout variants RCN2 (yielding 85.12% accuracy across 1.95M parameters) and RCNX (scaling performance to 89.31% accuracy across 1.58M parameters).
+            </p>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section aria-labelledby="projects" class="rounded-3xl border border-slate-800/90 bg-slate-900/45 p-5 shadow-panel backdrop-blur-xl sm:p-7 lg:p-8">
+          <div class="mb-8">
+            <p class="font-mono text-xs uppercase tracking-[0.24em] text-cyan-400">04 / Hardware Build Log</p>
+            <h2 id="projects" class="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              Engineering Projects
+            </h2>
+          </div>
+
+          <div class="grid gap-4 xl:grid-cols-2">
+            <article class="group flex h-full flex-col rounded-2xl border border-slate-800 bg-slate-950/50 p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/35 hover:shadow-glow sm:p-6">
+              <div class="flex items-start justify-between gap-4">
+                <span class="font-mono text-xs text-cyan-400">PRJ_01</span>
+                <svg class="h-5 w-5 text-slate-700 transition group-hover:text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 9 4 12l4 3m8-6 4 3-4 3m-5-9-2 12" />
+                </svg>
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-white">Adaptive Cruise Control with LiDAR</h3>
+              <p class="mt-3 flex-1 text-[15px] leading-7 text-slate-400">
+                Constructed an asynchronous velocity tracking environment utilizing NXP S32K144 EVB microcontrollers paired with a MOTOGD-DEVKIT driver shield. Mapped logic targets directly inside MATLAB Simulink.
+              </p>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-cyan-400 transition hover:text-cyan-300">
+                View on GitHub
+                <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <article class="group flex h-full flex-col rounded-2xl border border-slate-800 bg-slate-950/50 p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/35 hover:shadow-glow sm:p-6">
+              <div class="flex items-start justify-between gap-4">
+                <span class="font-mono text-xs text-cyan-400">PRJ_02</span>
+                <svg class="h-5 w-5 text-slate-700 transition group-hover:text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 9 4 12l4 3m8-6 4 3-4 3m-5-9-2 12" />
+                </svg>
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-white">Emergency Vehicle Audio Detection</h3>
+              <p class="mt-3 flex-1 text-[15px] leading-7 text-slate-400">
+                Engineered automated intersection priority controls running on NXP FRDM-K64F nodes using hardware-driven gain modules, active bandpass filters, and directional microphone arrays to localize sirens.
+              </p>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-cyan-400 transition hover:text-cyan-300">
+                View on GitHub
+                <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <article class="group flex h-full flex-col rounded-2xl border border-slate-800 bg-slate-950/50 p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/35 hover:shadow-glow sm:p-6">
+              <div class="flex items-start justify-between gap-4">
+                <span class="font-mono text-xs text-cyan-400">PRJ_03</span>
+                <svg class="h-5 w-5 text-slate-700 transition group-hover:text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 9 4 12l4 3m8-6 4 3-4 3m-5-9-2 12" />
+                </svg>
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-white">Vision Vehicle Feature Trackers</h3>
+              <p class="mt-3 flex-1 text-[15px] leading-7 text-slate-400">
+                Deployed structural feature classification routines targeting real-time road array tracking. Calculated dense image bounding sets using HOG features and cascade models executed natively through NXP S32V234 hardware.
+              </p>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-cyan-400 transition hover:text-cyan-300">
+                View on GitHub
+                <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <article class="group flex h-full flex-col rounded-2xl border border-slate-800 bg-slate-950/50 p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/35 hover:shadow-glow sm:p-6">
+              <div class="flex items-start justify-between gap-4">
+                <span class="font-mono text-xs text-cyan-400">PRJ_04</span>
+                <svg class="h-5 w-5 text-slate-700 transition group-hover:text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 9 4 12l4 3m8-6 4 3-4 3m-5-9-2 12" />
+                </svg>
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-white">Wireless Parking Node Controls</h3>
+              <p class="mt-3 flex-1 text-[15px] leading-7 text-slate-400">
+                Programmed ultra-low-power radio stack components over 802.15.4 physical bands wrapped around an active, self-healing Thread mesh protocol layer to route mesh diagnostics.
+              </p>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-cyan-400 transition hover:text-cyan-300">
+                View on GitHub
+                <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section aria-labelledby="education" class="rounded-3xl border border-slate-800/90 bg-slate-900/45 p-5 shadow-panel backdrop-blur-xl sm:p-7 lg:p-8">
+          <div class="mb-7">
+            <p class="font-mono text-xs uppercase tracking-[0.24em] text-cyan-400">05 / Academic Foundation</p>
+            <h2 id="education" class="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              Education
+            </h2>
+          </div>
+
+          <div class="grid gap-4 xl:grid-cols-2">
+            <article class="rounded-2xl border border-slate-800 bg-slate-950/50 p-5 sm:p-6">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <span class="rounded-lg border border-cyan-400/20 bg-cyan-400/5 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-cyan-300">Degree 01</span>
+                <span class="font-mono text-xs text-slate-600">GRAD: 05/2021</span>
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-white">M.S. in Computer Engineering</h3>
+              <p class="mt-2 text-slate-400">Purdue University Indianapolis</p>
+              <p class="mt-5 font-mono text-sm font-semibold text-cyan-300">GPA: 3.86</p>
+            </article>
+
+            <article class="rounded-2xl border border-slate-800 bg-slate-950/50 p-5 sm:p-6">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <span class="rounded-lg border border-slate-700 bg-slate-900/70 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-slate-400">Degree 02</span>
+                <span class="font-mono text-xs text-slate-600">GRAD: 05/2017</span>
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-white">B.Tech in Electronics and Communication Engineering</h3>
+              <p class="mt-2 text-slate-400">University of Calicut, India</p>
+            </article>
+          </div>
+        </section>
+
+        <footer class="px-2 py-5">
+          <div class="flex flex-col gap-3 border-t border-slate-900 pt-6 font-mono text-[10px] uppercase tracking-[0.17em] text-slate-700 sm:flex-row sm:items-center sm:justify-between">
+            <p>© 2026 Arjun-NA // Embedded Systems &amp; Firmware</p>
+            <p>Built for signal, scale &amp; deterministic execution.</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
