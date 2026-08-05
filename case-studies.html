@@ -72,7 +72,7 @@
                         <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-6 relative group hover:border-nvidia/40 transition-all duration-300">
                             <span class="font-mono text-[9px] bg-nvidia-dark text-nvidia border border-[#2d4a0a] px-2 py-0.5 rounded-sm absolute top-4 right-4">DEBUGGING</span>
                             <div class="mb-4">
-                                <span class="font-mono text-xs text-slate-500">[ CASE: CCAP-CORE-RACE ]</span>
+                                <span class="font-mono text-xs text-slate-500">[ CASE: CCAP-CORE-CRASH ]</span>
                                 <h3 class="text-lg font-bold text-white mt-1 font-sans">DOCSIS 4.0 CCAP Core Crash Debugging</h3>
                                 <p class="font-sans text-xs text-nvidia">Firmware &amp; Systems Validation &bull; Multi-module DOCSIS 4.0 test bed</p>
                             </div>
@@ -81,12 +81,12 @@
                             </p>
                             <ul class="space-y-2 text-sm text-slate-400 list-none pl-0 font-sans mb-4">
                                 <li class="flex items-start gap-2.5"><span class="text-nvidia font-mono mt-0.5">&bull;</span> Led a small team of engineers executing parallel test campaigns to systematically reproduce the crashes across varied load patterns and timing scenarios.</li>
-                                <li class="flex items-start gap-2.5"><span class="text-nvidia font-mono mt-0.5">&bull;</span> Analyzed CCAP core logs &mdash; stack traces, register states, and memory dumps &mdash; to pinpoint a timing-sensitive race condition in the scheduler subsystem during high-concurrency resource allocation.</li>
+                                <li class="flex items-start gap-2.5"><span class="text-nvidia font-mono mt-0.5">&bull;</span> Analyzed modem logs, RPD device logs, and packet captures to correlate crash patterns across test scenarios, and developed a GCP message decoder to dissect control plane messages for root cause isolation.</li>
                                 <li class="flex items-start gap-2.5"><span class="text-nvidia font-mono mt-0.5">&bull;</span> Identified the exact crash location within two weeks, reducing mean time to reproduce from days to hours.</li>
                                 <li class="flex items-start gap-2.5"><span class="text-nvidia font-mono mt-0.5">&bull;</span> Enabled a targeted firmware fix that restored full test bed stability and established a repeatable debugging framework for future CCAP core investigations.</li>
                             </ul>
                             <div class="flex items-center justify-between pt-4 border-t border-slate-800/40 font-sans text-[11px] text-slate-500">
-                                <span>DOCSIS 4.0 / CCAP / Race Conditions</span>
+                                <span>DOCSIS 4.0 / CCAP / Log Analysis / GCP</span>
                                 <span class="font-mono">S &rarr; T &rarr; A &rarr; R</span>
                             </div>
                         </div>
