@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjun-NA | Research &amp; Publications</title>
+    <!-- Repaired CDNs -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nvidia:        '#76B900',
+                        'nvidia-bright': '#9EFF00',
+                        'nvidia-dark':  '#1a2a05',
+                    },
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .tech-heading::before { content: ">> "; color: #76B900; }
+    </style>
+</head>
+<body class="bg-black text-neutral-400 min-h-screen">
+
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 py-8 lg:py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            
+            <!-- LEFT PROFILE SIDEBAR -->
+            <header class="lg:col-span-4 lg:sticky lg:top-16 bg-slate-900/30 backdrop-blur-md border border-slate-800/60 rounded-xl p-6 lg:p-8 shadow-2xl">
+                <div class="font-mono text-[10px] text-slate-500 mb-4 tracking-widest uppercase flex items-center gap-2">
+                    <i class="fa-solid fa-book-open-reader text-nvidia"></i> [ RESEARCH_REGISTRY_NODE ]
+                </div>
+                <h1 class="text-3xl font-bold text-white tracking-tight font-sans mb-1">Arjun-NA</h1>
+                <p class="text-sm font-medium text-nvidia font-sans mb-6">// Publications Index</p>
+                <div class="flex flex-col gap-3">
+                    <a href="contact.html" class="w-full text-center font-sans text-sm font-medium bg-nvidia text-black px-5 py-3 rounded-md hover:bg-nvidia-bright hover:shadow-[0_0_20px_rgba(118,185,0,0.4)] transition-all duration-200">
+                        <i class="fa-solid fa-terminal mr-2"></i> Request Architecture Quote
+                    </a>
+                </div>
+            </header>
+
+            <!-- RIGHT CONTENT COLUMN -->
+            <main class="lg:col-span-8 space-y-12">
+                
+                <!-- GLOBAL NAVIGATION BAR -->
+                <nav class="flex gap-4 border-b border-slate-800 pb-4 font-sans text-xs tracking-wider">
+                    <a href="index.html" class="text-slate-500 hover:text-slate-300 transition-colors"><i class="fa-solid fa-folder mr-1"></i> // CORE</a>
+                    <a href="projects.html" class="text-slate-500 hover:text-slate-300 transition-colors"><i class="fa-solid fa-diagram-project mr-1"></i> // REPOS</a>
+                    <a href="research.html" class="text-nvidia border-b border-nvidia pb-4 -mb-[17px] font-bold"><i class="fa-solid fa-graduation-cap mr-1"></i> // RESEARCH</a>
+                    <a href="contact.html" class="text-slate-500 hover:text-slate-300 transition-colors"><i class="fa-solid fa-envelope mr-1"></i> // COMM</a>
+                </nav>
+
+                <!-- SECTION: PEER-REVIEWED PUBLICATIONS -->
+                <section>
+                    <h2 class="tech-heading text-sm font-sans font-bold text-white uppercase tracking-widest mb-6">
+                        Peer-Reviewed Publications &amp; Deep Learning Engines
+                    </h2>
+                    <div class="space-y-6">
+                        
+                        <!-- RCNX -->
+                        <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-6 relative group hover:border-nvidia/40 transition-all duration-300">
+                            <span class="font-mono text-[9px] bg-nvidia-dark text-nvidia border border-[#2d4a0a] px-2 py-0.5 rounded-sm absolute top-4 right-4">IEEE Xplore</span>
+                            <div class="mb-4">
+                                <span class="font-mono text-xs text-slate-500">[ PAPER: RCNX ]</span>
+                                <h3 class="text-lg font-bold text-white mt-1 font-sans">RCNX: Residual Capsule NeXt</h3>
+                                <p class="font-sans text-xs text-nvidia">A. N. Anilkumar, M. El-Sharkawy &bull; IEEE IEMTRONICS</p>
+                            </div>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-4 font-sans">
+                                Explored structural Capsule Network variants to address spatial pose limitations of classical deep neural topologies. Achieved an 89.31% classification accuracy score using highly compressed architecture layers utilizing only 1.58 million parameters.
+                            </p>
+                            <div class="text-xs font-sans">
+                                <a href="https://www.semanticscholar.org/paper/RCNX%3A-Residual-Capsule-NeXt-Anilkumar-El-Sharkawy/85748b0e44747d24610c516ca67fbcdc162fc68e" target="_blank" rel="noopener" class="text-nvidia hover:underline"><i class="fa-solid fa-graduation-cap mr-1"></i> View Abstract via Semantic Scholar</a>
+                            </div>
+                        </div>
+
+                        <!-- RCN2 -->
+                        <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-6 relative group hover:border-nvidia/40 transition-all duration-300">
+                            <span class="font-mono text-[9px] bg-nvidia-dark text-nvidia border border-[#2d4a0a] px-2 py-0.5 rounded-sm absolute top-4 right-4">IEEE DTS</span>
+                            <div class="mb-4">
+                                <span class="font-mono text-xs text-slate-500">[ PAPER: RCN2 ]</span>
+                                <h3 class="text-lg font-bold text-white mt-1 font-sans">RCN2: Residual Capsule Network V2</h3>
+                                <p class="font-sans text-xs text-nvidia">A. N. Anilkumar, M. El-Sharkawy &bull; Design &amp; Test Conference</p>
+                            </div>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-4 font-sans">
+                                Researched framework combinations bridging deep ResNet layer connections over structural Capsule clusters to mitigate internal gradient tracking drop-offs, yielding an 85.12% accuracy footprint under 1.95 million configurations.
+                            </p>
+                            <div class="text-xs font-sans">
+                                <a href="https://scholarworks.indianapolis.iu.edu/bitstreams/4fc438df-4ef4-4c3a-b92f-1268587b6b20/download" target="_blank" rel="noopener" class="text-nvidia hover:underline"><i class="fa-solid fa-file-pdf mr-1"></i> Download Pre-Print Document</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <footer class="pt-8 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
+                    <p>&copy; 2026 Arjun-NA. Research Publications Console.</p>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/Arjun-NA" target="_blank" class="hover:text-nvidia transition-colors">GitHub</a>
+                        <a href="https://www.linkedin.com/in/arjunnapmna/" target="_blank" class="hover:text-nvidia transition-colors">LinkedIn</a>
+                    </div>
+                </footer>
+
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
