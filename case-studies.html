@@ -127,13 +127,13 @@
                             </p>
                             <ul class="space-y-2 text-sm text-slate-400 list-none pl-0 font-sans mb-4">
                                 <li class="flex items-start gap-2.5"><span class="text-nvidia font-mono mt-0.5">&bull;</span> Verified hardware setup first &mdash; SDA/SCL connections, pull-up resistors, voltage levels &mdash; confirming the physical layer was correct.</li>
-                                <li class="flex items-start gap-2.5"><span class="text-nvidia font-mono mt-0.5">&bull;</span> Analyzed the Simulink I&sup2;C block configuration against the LiDAR sensor datasheet and identified an addressing format discrepancy.</li>
+                                <li class="flex items-start gap-2.5"><span class="text-nvidia font-mono mt-0.5">&bull;</span> Used a logic analyzer to capture I&sup2;C traffic on the SDA/SCL lines and compared the actual protocol frames against the LiDAR sensor datasheet, revealing an addressing format discrepancy.</li>
                                 <li class="flex items-start gap-2.5"><span class="text-nvidia font-mono mt-0.5">&bull;</span> Root cause was an 8-bit vs 7-bit I&sup2;C addressing mismatch &mdash; the read/write bit was incorrectly treated as part of the device address instead of a separate control bit in the protocol frame.</li>
                                 <li class="flex items-start gap-2.5"><span class="text-nvidia font-mono mt-0.5">&bull;</span> Corrected the configuration to proper 7-bit address format, updated Simulink block parameters, and validated driver handling of the R/W bit against the datasheet.</li>
                                 <li class="flex items-start gap-2.5"><span class="text-nvidia font-mono mt-0.5">&bull;</span> Established reliable LiDAR sensor communication, enabled distance data transmission, and restored motor control functionality.</li>
                             </ul>
                             <div class="flex items-center justify-between pt-4 border-t border-slate-800/40 font-sans text-[11px] text-slate-500">
-                                <span>I&sup2;C / LiDAR / NXP K64F / Simulink</span>
+                                <span>I&sup2;C / LiDAR / NXP K64F / Logic Analyzer</span>
                                 <span class="font-mono">S &rarr; T &rarr; A &rarr; R</span>
                             </div>
                         </div>
