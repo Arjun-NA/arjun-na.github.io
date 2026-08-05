@@ -12,11 +12,13 @@
         'contact.html'
     ];
 
-    const THRESHOLD = 60;      // minimum horizontal travel (px)
+    const THRESHOLD = 40;      // minimum horizontal travel (px)
     const MAX_Y_RATIO = 0.5;   // vertical travel must be <= 50% of horizontal
 
     let startX = 0;
     let startY = 0;
+
+    document.body.style.touchAction = 'pan-y';
 
     function getCurrentIndex() {
         const path = window.location.pathname;
