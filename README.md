@@ -4,8 +4,9 @@ A modern, high-fidelity responsive multi-page web presence hosted via GitHub Pag
 
 ## 📂 Architecture Structure
 - `index.html`: Core profile system routing with a dynamic multi-processor typewriter console layer and full corporate milestones.
-- `projects.html`: Engineering repositories matrix highlighting NXP micro-hardware logic sets.
 - `research.html`: Peer-reviewed publications index (*RCNX*, *RCN2*) and deep learning engines.
+- `case-studies.html`: Field engineering case studies highlighting challenging technical problems and their resolution (STAR format).
+- `projects.html`: Engineering repositories matrix highlighting NXP micro-hardware logic sets.
 - `contact.html`: Hardened client payload intake panel featuring honeypot robot containment fields and integration configurations.
 
 ## 🚀 Rapid Deployment Workflow
