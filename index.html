@@ -113,8 +113,11 @@
                                     07/2021 – Present
                                 </span>
                             </div>
-                            <button onclick="toggleExp(this)" class="w-full text-left text-sm text-slate-300 leading-relaxed font-sans mb-2 border-l-2 border-nvidia/60 pl-3 cursor-pointer hover:border-nvidia transition-colors">
-                                <span class="text-nvidia font-mono">&rarr;</span> Led firmware development for the DOCSIS 4.0 US ATDMA data path and emulation bringup. Also provide firmware development support for the 1.6T HSI product and software support for the 800G HSI product. <span class="text-nvidia font-mono text-xs toggle-indicator">[+]</span>
+                            <p class="text-sm text-slate-300 leading-relaxed font-sans mb-2 border-l-2 border-nvidia/60 pl-3">
+                                <span class="text-nvidia font-mono">&rarr;</span> Led firmware development for the DOCSIS 4.0 US ATDMA data path and emulation bringup. Also provide firmware development support for the 1.6T HSI product and software support for the 800G HSI product.
+                            </p>
+                            <button onclick="toggleExp(this)" title="Show details" class="expand-toggle inline-flex items-center justify-center w-4 h-4 bg-nvidia/10 text-nvidia border border-nvidia/50 rounded hover:bg-nvidia/20 transition-colors">
+                                <i class="fa-solid fa-plus text-[10px]"></i>
                             </button>
                             <div class="exp-details hidden">
                                 <ul class="space-y-2.5 text-sm text-slate-400 list-none pl-0 font-sans pt-2">
@@ -136,8 +139,11 @@
                                     08/2017 – 08/2018
                                 </span>
                             </div>
-                            <button onclick="toggleExp(this)" class="w-full text-left text-sm text-slate-300 leading-relaxed font-sans mb-2 border-l-2 border-nvidia/60 pl-3 cursor-pointer hover:border-nvidia transition-colors">
-                                <span class="text-nvidia font-mono">&rarr;</span> Independently built an automated Python PLC tracking tool and diagnostic web control panels for field engineering crews. <span class="text-nvidia font-mono text-xs toggle-indicator">[+]</span>
+                            <p class="text-sm text-slate-300 leading-relaxed font-sans mb-2 border-l-2 border-nvidia/60 pl-3">
+                                <span class="text-nvidia font-mono">&rarr;</span> Independently built an automated Python PLC tracking tool and diagnostic web control panels for field engineering crews.
+                            </p>
+                            <button onclick="toggleExp(this)" title="Show details" class="expand-toggle inline-flex items-center justify-center w-4 h-4 bg-nvidia/10 text-nvidia border border-nvidia/50 rounded hover:bg-nvidia/20 transition-colors">
+                                <i class="fa-solid fa-plus text-[10px]"></i>
                             </button>
                             <div class="exp-details hidden">
                                 <p class="text-sm text-slate-400 leading-relaxed font-sans pt-2">
@@ -215,9 +221,12 @@
     <script>
         function toggleExp(btn) {
             const details = btn.nextElementSibling;
-            const indicator = btn.querySelector('.toggle-indicator');
+            const icon = btn.querySelector('i');
             details.classList.toggle('hidden');
-            indicator.textContent = details.classList.contains('hidden') ? '[+]' : '[-]';
+            const isHidden = details.classList.contains('hidden');
+            icon.classList.remove('fa-plus', 'fa-minus');
+            icon.classList.add(isHidden ? 'fa-plus' : 'fa-minus');
+            btn.title = isHidden ? 'Show details' : 'Hide details';
         }
     </script>
 
