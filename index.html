@@ -104,8 +104,8 @@
                     
                     <div class="space-y-6">
                         <!-- MaxLinear -->
-                        <div class="bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 hover:border-slate-700/80 transition-all duration-200">
-                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div class="job-card bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 hover:border-slate-700/80 transition-all duration-200">
+                            <div onclick="toggleExp(this)" class="job-header flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4 p-2 -m-2 rounded cursor-pointer hover:bg-slate-900/40 transition-colors">
                                 <div>
                                     <h3 class="text-lg font-bold text-white font-sans">Senior Software Engineer (Embedded Systems)</h3>
                                     <p class="font-sans text-sm text-nvidia">MaxLinear, Inc. &bull; Carlsbad, CA</p>
@@ -114,7 +114,7 @@
                                     07/2021 – Present
                                 </span>
                             </div>
-                            <p class="text-sm text-slate-300 leading-relaxed font-sans mb-2 border-l-2 border-nvidia/60 pl-3">
+                            <p onclick="toggleExp(this)" class="job-summary text-sm text-slate-300 leading-relaxed font-sans mb-2 border-l-2 border-nvidia/60 pl-3 p-2 -m-2 rounded cursor-pointer hover:bg-slate-900/40 transition-colors">
                                 <span class="text-nvidia font-mono">&rarr;</span> Led firmware development for the DOCSIS 4.0 US ATDMA data path and emulation bringup. Also provide firmware development support for the 1.6T HSI product and software support for the 800G HSI product.
                             </p>
                             <button onclick="toggleExp(this)" title="Show details" class="expand-toggle inline-flex items-center justify-center w-4 h-4 bg-nvidia/10 text-nvidia border border-nvidia/50 rounded hover:bg-nvidia/20 transition-colors">
@@ -130,8 +130,8 @@
                         </div>
 
                         <!-- TIA -->
-                        <div class="bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 hover:border-slate-700/80 transition-all duration-200">
-                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                        <div class="job-card bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 hover:border-slate-700/80 transition-all duration-200">
+                            <div onclick="toggleExp(this)" class="job-header flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4 p-2 -m-2 rounded cursor-pointer hover:bg-slate-900/40 transition-colors">
                                 <div>
                                     <h3 class="text-lg font-bold text-white font-sans">Software Trainee</h3>
                                     <p class="font-sans text-sm text-nvidia">TIA Pvt Ltd &bull; Bangalore, India</p>
@@ -140,7 +140,7 @@
                                     08/2017 – 08/2018
                                 </span>
                             </div>
-                            <p class="text-sm text-slate-300 leading-relaxed font-sans mb-2 border-l-2 border-nvidia/60 pl-3">
+                            <p onclick="toggleExp(this)" class="job-summary text-sm text-slate-300 leading-relaxed font-sans mb-2 border-l-2 border-nvidia/60 pl-3 p-2 -m-2 rounded cursor-pointer hover:bg-slate-900/40 transition-colors">
                                 <span class="text-nvidia font-mono">&rarr;</span> Independently built an automated Python PLC tracking tool and diagnostic web control panels for field engineering crews.
                             </p>
                             <button onclick="toggleExp(this)" title="Show details" class="expand-toggle inline-flex items-center justify-center w-4 h-4 bg-nvidia/10 text-nvidia border border-nvidia/50 rounded hover:bg-nvidia/20 transition-colors">
@@ -220,9 +220,11 @@
 
     <!-- EXPERIENCE COLLAPSE TOGGLE -->
     <script>
-        function toggleExp(btn) {
-            const details = btn.nextElementSibling;
-            const icon = btn.querySelector('i');
+        function toggleExp(el) {
+            const card = el.closest('.job-card');
+            const details = card.querySelector('.exp-details');
+            const icon = card.querySelector('.expand-toggle i');
+            const btn = card.querySelector('.expand-toggle');
             details.classList.toggle('hidden');
             const isHidden = details.classList.contains('hidden');
             icon.classList.remove('fa-plus', 'fa-minus');
